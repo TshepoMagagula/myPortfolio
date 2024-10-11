@@ -1,0 +1,223 @@
+
+body {
+    background-color: black;
+    color: white;
+    margin-left: 25px;
+}
+
+
+.quote {
+    text-align: center;
+    font-style: italic;
+}
+
+.welcmTxt {
+    text-align: center;
+}
+
+
+header {
+    padding: 10PX;
+    background-image: url('./images/stripes.jpg');
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+
+hr {
+    margin-top: 0px;
+}
+
+h2 {
+    text-align: center;
+    background-image: url('./images/84.jpeg');
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    text-align: center;
+    background-image: url('./images/BG.jpeg');
+    padding: 5px;
+    margin: 5px;
+}
+
+.img {
+    width: 300px;
+    height: 200px;
+}
+
+.floatR {
+    float: right;
+    width: 80%;
+}
+
+.main {
+    margin: 1px;
+    padding: 1px;
+}
+
+.introMsg {
+    font-family:monospace;
+    font-size:20px;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.monoSpc {
+    font-family:monospace;
+    
+}
+
+.dropbtn {
+    background-color:black;
+    color: white;
+    font-size: 7px;
+    border: none;
+    cursor: pointer;
+    font-weight:bolder;
+    border-radius: 5%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    float: right;
+    padding-right: 70px;
+    padding-top: 10px;
+    position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+footer {
+    margin: 10px;
+    padding: 10px;
+    background-image: url('./images/abstract-blue.jpg');
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-instagram {
+    background:#0d358b;
+    color: white;
+}
+
+.fa-google {
+    background:rgb(241, 80, 80);
+    color: white;
+}
+
+.fa-linkedin {
+    background:rgb(10, 77, 139);
+    color: white;
+}
+
+.contactHead {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 85px;
+    margin-bottom: 1px;
+}
+
+.contPad {
+    padding-left: 200px;
+    padding-right: 100px;
+    padding-bottom: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+.left {
+    float: left;
+    width: 50%; /* The width is 20%, by default */
+}
+
+.right {
+    float: right;
+    width: 20%; /* The width is 20%, by default */
+}
+
+@media screen and (max-width: 980px) {
+    .left, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
