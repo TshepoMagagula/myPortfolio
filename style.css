@@ -58,6 +58,8 @@ h3 {
 .main {
     margin: 1px;
     padding: 1px;
+    background-color: black; /* Black background */
+    color: white; /* White text for contrast */
 }
 
 .introMsg {
@@ -127,6 +129,7 @@ footer {
     margin: 10px;
     padding: 10px;
     background-image: url('./images/abstract-blue.jpg');
+    background-repeat: no-repeat;
 }
 
 .fa {
@@ -174,50 +177,53 @@ footer {
     padding-bottom: 200px;
 }
 
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
-
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-}
-
 .left {
     float: left;
-    width: 50%; /* The width is 20%, by default */
+    width: 65%; /* The width is 20%, by default */
 }
 
 .right {
     float: right;
-    width: 20%; /* The width is 20%, by default */
+    width: 30%; /* The width is 20%, by default */
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 980px) {
     .left, .right {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+section.main {
+    flex: 1; /* This makes the main content expand and push the footer down */
+}
+
+.aboutMeP {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: larger;
+    text-align: center;
+    background-image: url(/images/abstract-blue.jpg);
+    background-repeat: no-repeat;
+}
+
+.right img {
+    width: 100%; /* Make the image responsive */
+    border-radius: 20px; /* Rounded corners for better blending */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Soft white shadow */
+}
+
+.img {
+    height: 400px;
 }
