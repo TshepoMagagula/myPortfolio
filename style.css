@@ -36,6 +36,8 @@ h2 {
     padding: 5px;
     margin: 5px;
     margin-bottom: 25px;
+    clear: both;
+    margin-top: 20px;
 }
 
 h3 {
@@ -43,6 +45,8 @@ h3 {
     background-image: url('./images/BG.jpeg');
     padding: 5px;
     margin: 5px;
+    clear: both;
+    margin-top: 20px;
 }
 
 .img {
@@ -268,4 +272,60 @@ section.main {
 .v-line-2 {
     left: 70%;
     transform: translateX(-50%);
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 45%; /* Adjust width based on your layout */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-image: url("/images/abstract-blue.jpg");
+    background-repeat: no-repeat;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-content {
+    text-align: center;
+    margin-top: 15px;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+a i.fa-github {
+    font-size: 36px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+a i.fa-github:hover {
+    color: grey; /* GitHub blue */
 }
