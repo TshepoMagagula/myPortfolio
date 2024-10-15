@@ -5,14 +5,36 @@ body {
     margin-left: 25px;
 }
 
+.myPic {
+    width: 198px;
+    height: 148px;
+    border-radius: 50%; /* Rounded corners for better blending */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Soft white shadow */
+}
+
+.greetM {
+    color: rgb(85, 204, 85);
+}
+
+.name {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 36px;
+}
+
+.watIDo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
 
 .quote {
     text-align: center;
     font-style: italic;
+    font-size: 20px;
 }
 
 .welcmTxt {
     text-align: center;
+    background-image: url('/images/abstract-blue.jpg');
 }
 
 
@@ -22,8 +44,9 @@ header {
 }
 
 h1 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 35px;
+    font-family: 'Best Signature Font', sans-serif;
+    font-style: italic;
 }
 
 hr {
@@ -52,6 +75,8 @@ h3 {
 .img {
     width: 300px;
     height: 200px;
+    border-radius: 20px; /* Rounded corners for better blending */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Soft white shadow */
 }
 
 .floatR {
@@ -196,6 +221,13 @@ footer {
     .left, .right {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
+
+    .introMsg {
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+        text-wrap: wrap;
+    }
 }
 
 html, body {
@@ -227,7 +259,7 @@ section.main {
 }
 
 .img {
-    height: 400px;
+    height: 250px;
 }
 
 .icon-container {
@@ -328,4 +360,17 @@ a i.fa-github {
 
 a i.fa-github:hover {
     color: grey; /* GitHub blue */
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
 }
