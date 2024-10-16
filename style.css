@@ -18,6 +18,13 @@ body {
     margin-right: 20px; /* space between the text and the image */
 }
 
+.abstractBlueBackG {
+    background-image: url('./images/abstract-blue.jpg');
+    width: 100%; 
+    height: 410px;
+    border-radius: 20px;
+}
+
 .myPic {
     max-width: 150px;
     border-radius: 50%; /* Rounded corners for better blending */
@@ -46,7 +53,7 @@ body {
 
 .welcmTxt {
     text-align: center;
-    background-image: url('/images/abstract-blue.jpg');
+    background-image: url('./images/abstract-blue.jpg');
 }
 
 
@@ -111,8 +118,7 @@ h3 {
 }
 
 .monoSpc {
-    font-family:monospace;
-    
+    font-family:monospace;    
 }
 
 .dropbtn {
@@ -220,12 +226,23 @@ footer {
 
 .left {
     float: left;
-    width: 65%; /* The width is 20%, by default */
+    width: 60%; /* The width is 20%, by default */
 }
 
 .right {
     float: right;
-    width: 30%; /* The width is 20%, by default */
+    width: 38%; /* The width is 20%, by default */
+    
+}
+
+.leftImg {
+    float: left;
+    width: 40%; /* The width is 20%, by default */
+}
+
+.rightText {
+    float: right;
+    width: 60%; /* The width is 20%, by default */
     
 }
 
@@ -234,12 +251,22 @@ footer {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
 
+    .leftImg, .rightText {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    .abstractBlueBackG {
+        width: 100%; 
+        height: 200px
+    }
+
     .introMsg {
         text-align: center;
         padding: 20px;
         margin: 10px;
         text-wrap: wrap;
     }
+
 }
 
 html, body {
@@ -261,7 +288,15 @@ section.main {
     padding: 10px;
     margin-left: 10px;
     font-size: larger;
-    text-align: center;
+    text-align: right;
+   
+}
+
+.contactsTxt {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: large;
 }
 
 .right img {
@@ -385,4 +420,24 @@ a i.fa-github:hover {
     background-color: white;
     margin: 6px 0;
     transition: 0.4s;
+}
+
+.experienceRow {
+    margin: 10px;
+    padding: 10px;
+}
+
+ul {
+    background-image: url('./images/abstract-blue.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+li {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: larger;
+    text-align: center;
 }
