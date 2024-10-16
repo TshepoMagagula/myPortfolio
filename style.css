@@ -37,12 +37,12 @@ body {
 
 .name {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 .watIDo {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .quote {
@@ -251,6 +251,17 @@ footer {
 @media screen and (max-width: 980px) {
     .left, .right {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    .contactHead {
+        font-family:'Times New Roman', Times, serif;
+        font-size: 50px;
+        margin-bottom: 1px;
+    }
+
+    .contPad {
+        padding-left: 20px;
+        padding-right: 60px;
     }
 
     .leftImg, .rightText {
