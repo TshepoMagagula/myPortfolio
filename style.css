@@ -388,8 +388,8 @@ section.main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    background-image: url("/images/abstract-blue.jpg");
-    background-repeat: no-repeat;
+    border: #4A90E2;
+    border-style: double;
 }
 
 .project-card:hover {
@@ -447,9 +447,8 @@ a i.fa-github:hover {
 }
 
 ul {
-    background-image: url('./images/abstract-blue.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    border: #4A90E2;
+    border-style: double;
     border-radius: 20px;
 }
 
@@ -468,6 +467,7 @@ li {
 .chatbot {
     border-color: #0d358b;
     border-style: solid;
+    border-radius: 5%;
     float: right;
     margin: 10px;
     padding: 10px;
@@ -477,5 +477,22 @@ li {
 .chatContainer {
     background-color: white;
     color: black;
+    border-radius: 5%;
     
+}
+
+.sendBtn {
+    margin: 5px;
+    margin-left: 0px;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 15%;
+    border-style:groove;
+}
+
+.form-control {
+    width: 97%;
+    height: 30px;
 }

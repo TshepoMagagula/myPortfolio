@@ -3,7 +3,26 @@ let sendBtn = document.getElementById("sendBtn");
 let textbox = document.getElementById("textbox");
 let chatContainer = document.getElementById("chatContainer");
 
-var user = {message:""};
+var user = {message:"", counter: 0};
+
+var questionsToAsk = [
+    {"question":"How can I help you?", "answer": ""},
+    {"question":"How did you find this Portfolio?", "answer": ""},
+    {"question":"How did you find this website?", "answer": ""}
+]
+
+askQuestions();
+
+function askQuestions(){
+    if(questionsToAsk.length > user.counter){
+        setTimeout(function(){
+            chatBotSendMsg(questionsToAsk[user.counter].question);
+            user.counter++;
+        }, 1000)
+    }
+
+    console.log(questionsToAsk[user.counter -1])
+}
 
 var possibleMsgArr = [
     {"message": "how are you", "response": "I'm great"},
@@ -59,8 +78,12 @@ sendBtn.addEventListener("click", function(e){
         user.message = messageTxt;
         sendMessage(messageTxt);
 
-        processMsg ();
+        // processMsg ();
         textbox.value = "";
+
+        askQuestions();
+
+        questionsToAsk[user.counter -1].response = user.message;
     }
 });
 
