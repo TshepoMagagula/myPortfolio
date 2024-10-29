@@ -41,8 +41,8 @@ setTimeout(function(){
 
 function chatBotSendMsg(messageTxt){
     var messageElement = document.createElement("div");
-   /*  messageElement.classList.add("");
-    messageElement.classList.add("");
+    messageElement.classList.add("textAlignR");
+    /* messageElement.classList.add("");
     messageElement.classList.add(""); */
     messageElement.style.margin = "10px";
     messageElement.style.padding = "5px";
@@ -56,9 +56,9 @@ function chatBotSendMsg(messageTxt){
 
 function sendMessage(messageTxt){
     var messageElement = document.createElement("div");
-   /*  messageElement.classList.add("");
-    messageElement.classList.add("");
-    messageElement.classList.add(""); */
+    messageElement.classList.add("leftText");
+    /* messageElement.classList.add("");
+    messageElement.classList.add(""); */ 
     messageElement.style.margin = "10px";
     messageElement.style.padding = "5px";
 
