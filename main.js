@@ -7,8 +7,9 @@ var user = {message:"", counter: 0};
 
 var questionsToAsk = [
     {"question":"How can I help you?", "answer": ""},
-    {"question":"How did you find this Portfolio?", "answer": ""},
-    {"question":"How did you find this website?", "answer": ""}
+    {"question":"How did you hear about this Portfolio?", "answer": ""},
+    {"question":"What's the reason for your visit?", "answer": ""},
+    {"question":"How did you find this website?", "answer": ""},
 ]
 
 askQuestions();
@@ -104,3 +105,46 @@ function processMsg(){
     
 };
 
+//Fade in Div
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const myDiv = document.getElementById('welcmDiv');
+        myDiv.classList.add('show');
+    },700);
+    
+});
+
+// Chat Icon
+let editTextElement;
+    function changeIcon(isHover) {
+        const icon = document.getElementById('chatbotIcon');
+        const hoverText = document.getElementById('hoverText');
+        if (isHover) {
+            icon.classList.replace('fa-comments', 'fa-pen-to-square');
+            hoverText.style.display = 'block';
+        } else {
+            icon.classList.replace('fa-pen-to-square', 'fa-comments');
+            hoverText.style.display = 'none';
+        }
+    }
+    
+    function changeIcons(showText) {
+        const hoverText = document.getElementById("hoverText");
+        if (showText) {
+            hoverText.style.display = "block";
+        } else {
+            changeIcon(showText);
+            hoverText.style.display = "none";
+        }
+    }
+    
+    
+    function toggleChatbot() {
+        const chatbotWindow = document.getElementById("chatbotWindow");
+        if (chatbotWindow.style.display === "none" || chatbotWindow.style.display === "") {
+            chatbotWindow.style.display = "flex";
+        } else {
+            chatbotWindow.style.display = "none";
+        }
+    }
