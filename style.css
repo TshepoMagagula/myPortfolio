@@ -458,7 +458,7 @@ li {
 .sendBtn {
     margin: 5px;
     margin-left: 0px;
-    padding: 10px;
+    padding: 15px;
     font-weight: bold;
     color: white;
     background-color: #007BFF;
@@ -499,7 +499,6 @@ li {
 /*  bot*/
 
 .chatbot-window {
-    height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
