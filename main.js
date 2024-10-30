@@ -75,7 +75,7 @@ sendBtn.addEventListener("click", function(e){
     if(textbox.value == ""){
         alert("Please type in message");
     }else {
-        var messageTxt = textbox.value;
+        let messageTxt = textbox.value;
         user.message = messageTxt;
         sendMessage(messageTxt);
 
@@ -84,7 +84,7 @@ sendBtn.addEventListener("click", function(e){
 
         askQuestions();
 
-        questionsToAsk[user.counter -1].response = user.message;
+        questionsToAsk[user.counter -1].answer = user.message;
     }
 });
 
