@@ -7,7 +7,6 @@
     <link href="https://fonts.cdnfonts.com/css/best-signature-font" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
     <header class="flex-container">
@@ -33,72 +32,78 @@
     </header>
     <br>
     <section class="main">
-        <h2>Experience</h2>
-        <h3>(Mar 2023 - Oct 2023) Accenture + University of Johannesburg Student Intern</h3>
-        <div class="experienceRow">
-            <div class="leftImg">
-                <img src="images/MixCollage.jpg" style="width: 100%; height: 400px">
+        <div id="experiences" class="Experience content active">
+            <h2>Experience</h2>
+            <h3>(Mar 2023 - Oct 2023) Accenture + University of Johannesburg Student Intern</h3>
+            <div class="experienceRow">
+                <div class="leftImg">
+                    <img src="images/MixCollage.jpg" style="width: 100%; height: 400px">
+                </div>
+                <div class="rightText">
+                    <p class="aboutMeP">
+                        <ul>
+                            <li>
+                                Led full life-cycle software development across various environments,
+                                managing source code with Git/GitHub and deploying web applications to 
+                                Render.
+                            </li>
+                            <li>
+                                Working within an Agile team, I converted epics and requirements 
+                                into user stories, facilitated daily stand-ups, and improved application 
+                                performance based on feedback.
+                            </li>
+                            <li>
+                                Designed relational databases, integrating 
+                                them with web applications through functions, stored procedures, and triggers.
+                            </li>
+                            <li>
+                                My web development expertise includes front-end (HTML5, CSS, AlpineJS) and 
+                                back-end (JavaScript, Node.js, SQL) operations, developing RESTful APIs, 
+                                and testing with Mocha.js.
+                            </li>
+                            <li>
+                                Additionally, I performed data cleaning and 
+                                validation using Python, and trained and tested machine learning models.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
             </div>
-            <div class="rightText">
-                <p class="aboutMeP">
-                    <ul>
-                        <li>
-                            Led full life-cycle software development across various environments,
-                            managing source code with Git/GitHub and deploying web applications to 
-                            Render.
-                        </li>
-                        <li>
-                            Working within an Agile team, I converted epics and requirements 
-                            into user stories, facilitated daily stand-ups, and improved application 
-                            performance based on feedback.
-                        </li>
-                        <li>
-                            Designed relational databases, integrating 
-                            them with web applications through functions, stored procedures, and triggers.
-                        </li>
-                        <li>
-                            My web development expertise includes front-end (HTML5, CSS, AlpineJS) and 
-                            back-end (JavaScript, Node.js, SQL) operations, developing RESTful APIs, 
-                            and testing with Mocha.js.
-                        </li>
-                        <li>
-                            Additionally, I performed data cleaning and 
-                            validation using Python, and trained and tested machine learning models.
-                        </li>
-                    </ul>
-                </p>
+            <h3>(Sep 2024 - Current) CAPACITI + FNB Advanced Technical Academy</h3>
+            <div class="experienceRow">
+                <div class="left">
+                    <p>
+                        <ul>
+                            <li>
+                                Built responsive web interfaces using HTML5, CSS3, and JavaScript.
+                            </li>
+                            <li>
+                                Created intuitive user experiences and engaging visual designs.
+                            </li>
+                            <li>
+                                Ensured compatibility across mobile devices and browsers through responsive design techniques.
+                            </li>
+                            <li>
+                                Deployed portfolio using GitHub Pages for easy accessibility.
+                            </li>
+                            <li>
+                                Applied CSS animations and transitions for enhanced user interactivity.
+                            </li>
+                        </ul>
+                        
+                    </p>
+                </div>
+                <div class="right">
+                    <img src="images/CAPCITI-LOGO-V3.jpg" style="width: 100%; height: 280px">
+                </div>
+            </div>
+            <div class="buttonDiv">
+                <button onclick="toggleDivs()" class="showProjects">Show Projects</button>
             </div>
         </div>
-        <h3>(Sep 2024 - Current) CAPACITI + FNB Advanced Technical Academy</h3>
-        <div class="experienceRow">
-            <div class="left">
-                <p>
-                    <ul>
-                        <li>
-                            Built responsive web interfaces using HTML5, CSS3, and JavaScript.
-                        </li>
-                        <li>
-                            Created intuitive user experiences and engaging visual designs.
-                        </li>
-                        <li>
-                            Ensured compatibility across mobile devices and browsers through responsive design techniques.
-                        </li>
-                        <li>
-                            Deployed portfolio using GitHub Pages for easy accessibility.
-                        </li>
-                        <li>
-                            Applied CSS animations and transitions for enhanced user interactivity.
-                        </li>
-                    </ul>
-                    
-                </p>
-            </div>
-            <div class="right">
-                <img src="images/CAPCITI-LOGO-V3.jpg" style="width: 100%; height: 280px">
-            </div>
-        </div>
-        <h2>Projects</h2>
-        <div class="project">
+        
+        <div id="projects" class="project content">
+            <h2>Projects</h2>
             <div class="project-card">
                 <img src="images/Capstone_HomePg.PNG" alt="Capstone Project Image" class="project-image">
                 <div class="project-content">
@@ -173,8 +178,14 @@
                     </a>
                 </div>
             </div>
+            <div class="buttonDiv">
+                <button onclick="toggleDivs()" class="showProjects">Show Experience</button>
+            </div>
         </div>        
     </section>
+
+    <script src="main.js"></script>
+
     <footer>
         <p>copyright © 2024 Tshepo Magagula</p>
     </footer>

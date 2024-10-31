@@ -87,7 +87,6 @@ h2 {
     margin: 5px;
     margin-bottom: 25px;
     clear: both;
-    margin-top: 20px;
 }
 
 h3 {
@@ -652,9 +651,36 @@ li {
     display: none;
 }
 
+/* Hide project and experience divs */
 
+.content {
+    display: none;
+}
 
+.content.active {
+    display: block;
+}
 
+.showProjects {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin-top: 15px;
+    border: #4A90E2 solid;
+    border-style:ridge;
+    
+}
+
+.showProjects:hover {
+    transform: scale(1.05);
+    background-color:#4A90E2;
+}
+
+.buttonDiv {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
 
 
 
