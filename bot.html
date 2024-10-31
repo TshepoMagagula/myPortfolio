@@ -7,91 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="chatbot-icon" onmouseover="changeIcon(true)" onmouseout="changeIcon(false)" onclick="toggleChatbot()">
+    <div class="chatbot-icon" onmouseover="displayClickToChat(true)" onmouseout="displayClickToChat(false)" onclick="toggleChatbot()">
         <i class="fas fa-comments" id="chatbotIcon"></i>
     </div>
     <div class="edit-text" id="hoverText" style="display: none;">Click to chat!</div>
     <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h5>Chat with Tshepo's Assistant</h5>
+            <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+        </div>
             <!-- Messages container -->
-            <div id="chatContainer" class="chatContainer" height="400px">
-                
-                <!-- chatbot message design -->
-                <!-- <div class="">
-                    <span>Chat: </span>
-                    <span>How are you</span>
-                </div> -->
-
-                <!-- User message design-->
-               <!--  <div class="">
-                    <span>Chat: </span>
-                    <span>How are you</span>
-                </div> -->
-            </div>
-
-            <div class="input-group">
+            <div id="chatContainer" class="chatContainer chatbot-messages" height="400px"></div>
+            <div class="input-group chatbot-input">
                 <input id="textbox" type="text" class="form-control">
                 <button id="sendBtn" class="sendBtn">Send</button>
             </div>
     </div>
 
     <script src="main.js"></script>
- 
-    <script>
-        let editTextElement;
-        function changeIcon(isHover) {
-            const icon = document.getElementById('chatbotIcon');
-            const hoverText = document.getElementById('hoverText');
-            if (isHover) {
-                icon.classList.replace('fa-comments', 'fa-pen-to-square');
-                hoverText.style.display = 'block';
-            } else {
-                icon.classList.replace('fa-pen-to-square', 'fa-comments');
-                hoverText.style.display = 'none';
-            }
-        }
-        
-        function changeIcons(showText) {
-            const hoverText = document.getElementById("hoverText");
-            if (showText) {
-                hoverText.style.display = "block";
-            } else {
-                changeIcon(showText);
-                hoverText.style.display = "none";
-            }
-        }
-        
-        
-        function toggleChatbot() {
-            const chatbotWindow = document.getElementById("chatbotWindow");
-            if (chatbotWindow.style.display === "none" || chatbotWindow.style.display === "") {
-                chatbotWindow.style.display = "flex";
-            } else {
-                chatbotWindow.style.display = "none";
-            }
-        }
-        
-        function sendMessage(event) {
-            if (event.type === 'keypress' && event.key !== 'Enter') return;
-        
-            const userInput = document.getElementById('userInput');
-            const chatMessages = document.getElementById('chatMessages');
-        
-            if (userInput.value.trim()) {
-                const userMessage = document.createElement('div');
-                userMessage.classList.add('message', 'user-message');
-                userMessage.textContent = userInput.value;
-                chatMessages.appendChild(userMessage);
-                
-                const botMessage = document.createElement('div');
-                botMessage.classList.add('message', 'bot-message');
-                botMessage.textContent = "Hello! How can I assist you today?";
-                chatMessages.appendChild(botMessage);
-        
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-                userInput.value = '';
-            }
-        }
-    </script>
     
 </body>
 </html>

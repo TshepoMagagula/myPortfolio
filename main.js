@@ -117,34 +117,21 @@ window.addEventListener('load', () => {
 
 // Chat Icon
 let editTextElement;
-    function changeIcon(isHover) {
-        const icon = document.getElementById('chatbotIcon');
-        const hoverText = document.getElementById('hoverText');
-        if (isHover) {
-            icon.classList.replace('fa-comments', 'fa-pen-to-square');
-            hoverText.style.display = 'block';
-        } else {
-            icon.classList.replace('fa-pen-to-square', 'fa-comments');
-            hoverText.style.display = 'none';
-        }
+
+function toggleChatbot() {
+    const chatbotWindow = document.getElementById("chatbotWindow");
+    if (chatbotWindow.style.display === "none" || chatbotWindow.style.display === "") {
+        chatbotWindow.style.display = "flex";
+    } else {
+        chatbotWindow.style.display = "none";
     }
-    
-    function changeIcons(showText) {
-        const hoverText = document.getElementById("hoverText");
-        if (showText) {
-            hoverText.style.display = "block";
-        } else {
-            changeIcon(showText);
-            hoverText.style.display = "none";
-        }
+}
+
+function displayClickToChat(isHover) {
+    const hoverText = document.getElementById('hoverText');
+    if (isHover) {
+        hoverText.style.display = 'block';
+    } else {
+        hoverText.style.display = 'none';
     }
-    
-    
-    function toggleChatbot() {
-        const chatbotWindow = document.getElementById("chatbotWindow");
-        if (chatbotWindow.style.display === "none" || chatbotWindow.style.display === "") {
-            chatbotWindow.style.display = "flex";
-        } else {
-            chatbotWindow.style.display = "none";
-        }
-    }
+}   
