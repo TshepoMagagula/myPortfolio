@@ -115,7 +115,7 @@ window.addEventListener('load', () => {
     
 });
 
-// Chat Icon
+// toggle Chatbot
 let editTextElement;
 
 function toggleChatbot() {
@@ -135,3 +135,12 @@ function displayClickToChat(isHover) {
         hoverText.style.display = 'none';
     }
 }   
+
+function toggleDivs() {
+    const div1 = document.getElementById('experiences');
+    const div2 = document.getElementById('projects');
+
+    // Toggle active class on both divs
+    div1.classList.toggle('active');
+    div2.classList.toggle('active');
+}
