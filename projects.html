@@ -7,6 +7,7 @@
     <link href="https://fonts.cdnfonts.com/css/best-signature-font" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
     <header class="flex-container">
@@ -31,8 +32,8 @@
         </div>
     </header>
     <br>
-    <section class="main">
-        <div id="experiences" class="Experience content active">
+    <section class="main" x-data="{ open: true }">
+        <div class="experiences" x-show="open">
             <h2>Experience</h2>
             <h3>(Mar 2023 - Oct 2023) Accenture + University of Johannesburg Student Intern</h3>
             <div class="experienceRow">
@@ -98,94 +99,94 @@
                 </div>
             </div>
             <div class="buttonDiv">
-                <button onclick="toggleDivs()" class="showProjects">Show Projects</button>
+                <button x-on:click="open = !open" class="showProjects">View Projects</button>
             </div>
         </div>
-        
-        <div id="projects" class="project content">
+
+        <div class="projects" x-show="!open">
             <h2>Projects</h2>
-            <div class="project-card">
-                <img src="images/Capstone_HomePg.PNG" alt="Capstone Project Image" class="project-image">
-                <div class="project-content">
-                    <h4>Capstone Project</h4>
-                    <p>
-                        This is one of the projects I'm the most proud of to have worked on.
-                        This web application was developed to aid health care professionals in
-                        dealing with the scourge of Coronary Artery Disease (CAD) and Heart Failure.
-                        It uses two machine learning models to diagnose CAD and Heart Failure
-                        at an early stage.
-                    </p>
-                    <a href="https://github.com/TshepoMagagula/Capstone-Group6" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="https://capstone-group6.onrender.com" target="_blank">
-                        <img src="images/webService.png" class="webService" style="max-width: 35px; border-radius: 50%;">
-                    </a>
+            <div class="project">
+                <div class="project-card">
+                    <img src="images/Capstone_HomePg.PNG" alt="Capstone Project Image" class="project-image">
+                    <div class="project-content">
+                        <h4>Capstone Project</h4>
+                        <p>
+                            This is one of the projects I'm the most proud of to have worked on.
+                            This web application was developed to aid health care professionals in
+                            dealing with the scourge of Coronary Artery Disease (CAD) and Heart Failure.
+                            It uses two machine learning models to diagnose CAD and Heart Failure
+                            at an early stage.
+                        </p>
+                        <a href="https://github.com/TshepoMagagula/Capstone-Group6" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="https://capstone-group6.onrender.com" target="_blank">
+                            <img src="images/webService.png" class="webService" style="max-width: 35px; border-radius: 50%;">
+                        </a>
+                    </div>
                 </div>
-            </div>
-        
-            <div class="project-card">
-                <img src="images/Pizza.PNG" alt="Pizza Website Image" class="project-image">
-                <div class="project-content">
-                    <h4>Pizza Website</h4>
-                    <p>
-                        This web application uses Restful APIs to allow users to make Pizza
-                        orders. It allows users to add their orders to a cart, which calculates
-                        the totals of the orders, and it keeps track of all the user's
-                        historical orders.
-                    </p>
-                    <a href="https://github.com/TshepoMagagula/pizza-cart-with-api" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
+            
+                <div class="project-card">
+                    <img src="images/Pizza.PNG" alt="Pizza Website Image" class="project-image">
+                    <div class="project-content">
+                        <h4>Pizza Website</h4>
+                        <p>
+                            This web application uses Restful APIs to allow users to make Pizza
+                            orders. It allows users to add their orders to a cart, which calculates
+                            the totals of the orders, and it keeps track of all the user's
+                            historical orders.
+                        </p>
+                        <a href="https://github.com/TshepoMagagula/pizza-cart-with-api" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        
-            <div class="project-card">
-                <img src="images/PhoneBill.PNG" alt="Phone Bill Website Image" class="project-image">
-                <div class="project-content">
-                    <h4>Total Phone Bill Website</h4>
-                    <p>
-                        This web application was developed to help an ISP (Internet Service Provider)
-                        bill its customers based on their calls, sms', and data usage. The user can
-                        add a predetermined price plan (which contains details about the cost of a
-                        phone call, the cost of an sms, and the cost of data).
-                    </p>
-                    <a href="https://github.com/TshepoMagagula/price_plans" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="https://price-plans-fqn4.onrender.com" target="_blank">
-                        <img src="images/webService.png" class="webService" style="max-width: 34px; border-radius: 50%;">
-                    </a>
+            
+                <div class="project-card">
+                    <img src="images/PhoneBill.PNG" alt="Phone Bill Website Image" class="project-image">
+                    <div class="project-content">
+                        <h4>Total Phone Bill Website</h4>
+                        <p>
+                            This web application was developed to help an ISP (Internet Service Provider)
+                            bill its customers based on their calls, sms', and data usage. The user can
+                            add a predetermined price plan (which contains details about the cost of a
+                            phone call, the cost of an sms, and the cost of data).
+                        </p>
+                        <a href="https://github.com/TshepoMagagula/price_plans" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="https://price-plans-fqn4.onrender.com" target="_blank">
+                            <img src="images/webService.png" class="webService" style="max-width: 34px; border-radius: 50%;">
+                        </a>
+                    </div>
                 </div>
-            </div>
-        
-            <div class="project-card">
-                <img src="images/TaxiQ.PNG" alt="Taxi Que Website Image" class="project-image">
-                <div class="project-content">
-                    <h4>Taxi Que Website</h4>
-                    <p>
-                        This application was developed to manage taxi ques in the rank.
-                        It keeps track of the number of people that are in the que, 
-                        the number of people that join the que, the number of people 
-                        that leave the que, and updates the number of people in the que
-                        when a taxi departs.
-                    </p>
-                    <a href="https://github.com/TshepoMagagula/taxi-queue-app-uj-2023" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="https://taxi-queue-app-uj-2023-1yec.onrender.com" target="_blank">
-                        <img src="images/webService.png" class="webService" style="max-width: 34px; border-radius: 50%;">
-                    </a>
+            
+                <div class="project-card">
+                    <img src="images/TaxiQ.PNG" alt="Taxi Que Website Image" class="project-image">
+                    <div class="project-content">
+                        <h4>Taxi Que Website</h4>
+                        <p>
+                            This application was developed to manage taxi ques in the rank.
+                            It keeps track of the number of people that are in the que, 
+                            the number of people that join the que, the number of people 
+                            that leave the que, and updates the number of people in the que
+                            when a taxi departs.
+                        </p>
+                        <a href="https://github.com/TshepoMagagula/taxi-queue-app-uj-2023" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="https://taxi-queue-app-uj-2023-1yec.onrender.com" target="_blank">
+                            <img src="images/webService.png" class="webService" style="max-width: 34px; border-radius: 50%;">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="buttonDiv">
-                <button onclick="toggleDivs()" class="showProjects">Show Experience</button>
-            </div>
-        </div>        
+                <button @click="open = true" class="showProjects">View Experience</button>
+            </div>     
+        </div>
+        
     </section>
-
-    <script src="main.js"></script>
-
     <footer>
         <p>copyright © 2024 Tshepo Magagula</p>
     </footer>
