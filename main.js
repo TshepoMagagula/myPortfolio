@@ -5,14 +5,15 @@ let chatContainer = document.getElementById("chatContainer");
 
 var user = {message:"", counter: 0};
 
+chatBotSendMsg("Please choose an option: ")
+initialiseOptions();
+
 var questionsToAsk = [
     {"question":"How can I help you?", "answer": ""},
     {"question":"How did you hear about this Portfolio?", "answer": ""},
     {"question":"What's the reason for your visit?", "answer": ""},
     {"question":"How did you find this website?", "answer": ""},
 ]
-
-askQuestions();
 
 function askQuestions(){
     if(questionsToAsk.length > user.counter){
@@ -36,15 +37,13 @@ var possibleMsgArr = [
     {"message": "what's your name?", "response": "I'm Bot"} */
 ];
 
-setTimeout(function(){
+/* setTimeout(function(){
     chatBotSendMsg("Hii from Chatbot");
-}, 1000);
+}, 1000); */
 
 function chatBotSendMsg(messageTxt){
     var messageElement = document.createElement("div");
     messageElement.classList.add("textAlignR");
-    /* messageElement.classList.add("");
-    messageElement.classList.add(""); */
     messageElement.style.margin = "10px";
     messageElement.style.padding = "5px";
 
@@ -82,9 +81,13 @@ sendBtn.addEventListener("click", function(e){
         // processMsg ();
         textbox.value = "";
 
-        askQuestions();
+        // askQuestions();
 
-        questionsToAsk[user.counter -1].answer = user.message;
+       // questionsToAsk[user.counter -1].answer = user.message;
+
+       assistantResponse(messageTxt);
+
+
     }
 });
 
@@ -104,6 +107,46 @@ function processMsg(){
     }
     
 };
+
+function initialiseOptions() {
+    let options = [
+        {number:1, choice: "Find out more about Tshepo"},
+        {number:2, choice: "View experience & Projects"},
+        {number:3, choice: "Get in touch with Tshepo"},
+    ];
+
+    var messageElement = document.createElement("div");
+    messageElement.classList.add("textAlignR");
+    messageElement.style.margin = "10px";
+    messageElement.style.padding = "5px";
+
+    for (let i = 0; i < options.length; i++){
+        messageElement.innerHTML += "<br>" +
+        "<span>" + options[i].number + "- " + options[i].choice +"</span>";
+    }
+
+    messageElement.animate([{easing:"ease-in", opacity:0.4}, {opacity:1}], {duration: 1000});
+    chatContainer.appendChild(messageElement);
+
+}
+
+function assistantResponse(messageTxt){
+    let userChoice = parseInt(messageTxt.trim())
+    switch(userChoice){
+        case 1:
+            ///get
+            alert("you chose weather");
+        case 2:
+            //get
+            alert("you chose sport");
+        case 3:
+            //get
+            alert("you chose news");
+        default:
+            //get
+            alert("you chose default");
+    }
+}
 
 //Fade in Div
 

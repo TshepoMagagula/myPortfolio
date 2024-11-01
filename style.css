@@ -471,10 +471,12 @@ li {
 }
 
 .textAlignR {
-    text-align: right;
+    text-align: left;
     border: rgb(177, 177, 177);
     border-style: ridge;
     border-radius: 10%;
+    margin-right: 80px;
+    background-color: rgb(177, 177, 177);
 }
 
 .leftText {
