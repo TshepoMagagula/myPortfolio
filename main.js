@@ -5,6 +5,7 @@ let chatContainer = document.getElementById("chatContainer");
 
 var user = {message:"", counter: 0};
 
+chatBotSendMsg("Hii! there, I am your virtual assistant: ")
 chatBotSendMsg("Please choose an option: ")
 initialiseOptions();
 
@@ -47,11 +48,11 @@ function chatBotSendMsg(messageTxt){
     messageElement.style.margin = "10px";
     messageElement.style.padding = "5px";
 
-    messageElement.innerHTML = "<span>Chatbot: </span>" +
-    "<span>" + messageTxt +"</span>";
+    messageElement.innerHTML = "<span>" + messageTxt +"</span>";
 
     messageElement.animate([{easing:"ease-in", opacity:0.4}, {opacity:1}], {duration: 1000});
     chatContainer.appendChild(messageElement);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
 };
 
 function sendMessage(messageTxt){
@@ -112,7 +113,7 @@ function initialiseOptions() {
     let options = [
         {number:1, choice: "Find out more about Tshepo"},
         {number:2, choice: "View experience & Projects"},
-        {number:3, choice: "Get in touch with Tshepo"},
+        {number:3, choice: "Get in touch with Tshepo"}
     ];
 
     var messageElement = document.createElement("div");
@@ -127,6 +128,7 @@ function initialiseOptions() {
 
     messageElement.animate([{easing:"ease-in", opacity:0.4}, {opacity:1}], {duration: 1000});
     chatContainer.appendChild(messageElement);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
 
 }
 
@@ -135,16 +137,56 @@ function assistantResponse(messageTxt){
     switch(userChoice){
         case 1:
             ///get
-            alert("you chose weather");
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("textAlignR");
+            messageElement.style.margin = "10px";
+            messageElement.style.padding = "5px";
+
+            messageElement.innerHTML = "<span>" + "Tshepo is a fullstack web developer. Visit the " + "<a href='about.html'>About Me</a>" + " page for more information" + "</span>";
+
+            messageElement.animate([{easing:"ease-in", opacity:0.4}, {opacity:1}], {duration: 1000});
+            chatContainer.appendChild(messageElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            break;
         case 2:
             //get
-            alert("you chose sport");
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("textAlignR");
+            messageElement.style.margin = "10px";
+            messageElement.style.padding = "5px";
+
+            messageElement.innerHTML = "<span>" + "Tshepo has designed and developed a number of software solutions. You can view them in the " + "<a href='projects.html'>Projects</a>" + " page." + "</span>";
+
+            messageElement.animate([{easing:"ease-in", opacity:0.4}, {opacity:1}], {duration: 1000});
+            chatContainer.appendChild(messageElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            break;
         case 3:
             //get
-            alert("you chose news");
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("textAlignR");
+            messageElement.style.margin = "10px";
+            messageElement.style.padding = "5px";
+
+            messageElement.innerHTML = "<span>" + "You can contact Tshepo via various means. Visit the " + "<a href='contacts.html'>Contact Me</a>" + " page for more information." + "</span>";
+
+            messageElement.animate([{easing:"ease-in", opacity:0.4}, {opacity:1}], {duration: 1000});
+            chatContainer.appendChild(messageElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            break;
         default:
             //get
-            alert("you chose default");
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("textAlignR");
+            messageElement.style.margin = "10px";
+            messageElement.style.padding = "5px";
+
+            messageElement.innerHTML = "<span>" + "Please select a valid option " + "</span>";
+
+            messageElement.animate([{easing:"ease-in", opacity:0.4}, {opacity:1}], {duration: 1000});
+            chatContainer.appendChild(messageElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            break;
     }
 }
 
