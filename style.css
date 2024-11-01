@@ -476,7 +476,7 @@ li {
     border-style: ridge;
     border-radius: 10%;
     margin-right: 80px;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(158, 197, 248);
 }
 
 .leftText {
@@ -605,7 +605,7 @@ li {
 .chatbot-input {
     display: flex;
     padding: 10px;
-    background-color: #f7f7f7;
+    background-color:#007bff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -619,18 +619,18 @@ li {
 }
 
 .chatbot-input button {
-    background-color: #007bff;
+    background-color: rgb(62, 138, 62);
     color: white;
-    border: none;
+    border: solid;
     border-radius: 20px;
-    padding: 8px 12px;
+    padding: 10px 14px;
     margin-left: 10px;
     cursor: pointer;
 }
-.chatbot-icon:hover {
-    background-color: #9251c8;
-}
 
+.chatbot-input button:hover {
+    transform: scale(1.05);
+}
 
 .edit-icon {
     display: none;
@@ -682,6 +682,18 @@ li {
     text-align: center;
     padding: 5px;
     margin: 5px;
+}
+
+.chatDialogImg {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
 
 
