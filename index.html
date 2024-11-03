@@ -57,45 +57,26 @@
                 </p>
             </div>
         </div>
-        <div class="chatbot-icon" onmouseover="changeIcon(true)" onmouseout="changeIcon(false)" onclick="toggleChatbot()">
+
+        <!-- Chatbot start -->
+        <div class="chatbot-icon" onmouseover="displayClickToChat(true)" onmouseout="displayClickToChat(false)" onclick="toggleChatbot()">
             <i class="fas fa-comments" id="chatbotIcon"></i>
         </div>
         <div class="edit-text" id="hoverText" style="display: none;">Click to chat!</div>
-        <div class="chatbot">
-            <h4 class="floatR">ChatBot</h4>
-
-            <div class="media">
-                <img src="./images/meilleur-chatbot.jpg" class="bot" alt="...">
-                <div class="">
-                    <!-- <h6>Headinhg</h6> -->
-                    <span>Online</span>
-                </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <img src="./images/meilleur-chatbot.jpg" class="chatDialogImg">
+                <h5>Chat with Tshepo's Assistant</h5>
+                <button class="close-btn" onclick="toggleChatbot()">&times;</button>
             </div>
-
-            <!-- Messages container -->
-            <div id="chatContainer" class="chatContainer" height="400px">
-                
-                <!-- chatbot message design -->
-                <!-- <div class="">
-                    <span>Chat: </span>
-                    <span>How are you</span>
-                </div> -->
-
-                <!-- User message design-->
-               <!--  <div class="">
-                    <span>Chat: </span>
-                    <span>How are you</span>
-                </div> -->
-            </div>
-
-            <div class="input-group">
-                <input id="textbox" type="text" class="form-control">
-                <div class="input-group-append">
-
+                <!-- Messages container -->
+                <div id="chatContainer" class="chatContainer chatbot-messages" height="400px"></div>
+                <div class="input-group chatbot-input">
+                    <input id="textbox" type="text" class="form-control">
                     <button id="sendBtn" class="sendBtn">Send</button>
                 </div>
-            </div>
         </div>
+        <!-- Chatbot End -->
     </section>
     <footer>
         <p>copyright © 2024 Tshepo Magagula</p>
